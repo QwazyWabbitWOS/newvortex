@@ -1067,10 +1067,10 @@ void talentmenu_handler (edict_t *ent, int option)
 	else closemenu(ent);
 }
 
-void ChooseTalentUpgradeMenu (edict_t *ent)
+void ChooseTalentUpgradeMenu(edict_t* ent)
 {
-   if (!ShowMenu(ent))
-        return;
+	if (!ShowMenu(ent))
+		return;
 	clearmenu(ent);
 	//					xxxxxxxxxxxxxxxxxxxxxxxxxxx (max length 27 chars)
 	addlinetomenu(ent, "Talents Menu", MENU_GREEN_CENTERED);
@@ -1135,9 +1135,9 @@ void generalmenu_handler (edict_t *ent, int option)
 	case 10: ShowTradeMenu(ent); break;
 	case 11: ShowVoteModeMenu(ent); break;
 	case 12: ShowHelpMenu(ent, 0); break;
-	case 13: SwitchCharacterMenu(ent, 0); break;
-	case 14: StopPrompt(ent, 0); break;
-	case 15: PasswordMenu(ent, 0);break;
+	case 13: SwitchCharacterMenu(ent); break;
+	case 14: StopPrompt(ent); break;
+	case 15: PasswordMenu(ent);break;
 	default: closemenu(ent);
 	}
 	//OpenTalentUpgradeMenu(ent, 0); break;
