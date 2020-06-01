@@ -763,7 +763,7 @@ extern	edict_t* g_edicts;
 
 //32 bit float precision caps this to 0.00000000023283064f which gives max result of .99999998407391880
 #define	random()	((randomMT() * 0.00000000023283064f))
-#define crandom()	(2.0 * (random() - 0.5))
+#define crandom()	(2.0f * (random() - 0.5f))
 
 extern	cvar_t	*maxentities;
 extern	cvar_t	*deathmatch;

@@ -2410,7 +2410,7 @@ void Cmd_AdminCmd (edict_t *ent)
 	else if (Q_strcasecmp(cmd1, "srune") == 0)
 	{
 		int index = atoi(cmd3);
-		int type;
+		int type = ITEM_NONE;
 
 		if (ent->myskills.administrator < 10)
 			return;
@@ -2426,8 +2426,10 @@ void Cmd_AdminCmd (edict_t *ent)
 		else if (Q_strcasecmp(cmd2, "unique") == 0)
 			type = ITEM_UNIQUE;
 
-		if (index < 0)	adminSpawnRune(ent, type, 0);
-			else adminSpawnRune(ent, type, index);
+		if (index < 0)
+			adminSpawnRune(ent, type, 0);
+		else 
+			adminSpawnRune(ent, type, index);
 	}
 	else if (Q_strcasecmp(cmd1, "title") == 0)
 	{
