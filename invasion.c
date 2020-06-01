@@ -625,7 +625,7 @@ void INV_AwardMonsterKill (edict_t *attacker, edict_t *target)
 		player->myskills.credits += credits;
 
 		//gi.cprintf(player, PRINT_HIGH, "You gained %d experience and %d credits!\n", exp_points, credits);
-		cprintf(player, PRINT_HIGH, "You dealt %.0f damage (%.0f%c) to %s (level %d), gaining %d experience and %d credits\n", 
+		safe_cprintf(player, PRINT_HIGH, "You dealt %.0f damage (%.0f%c) to %s (level %d), gaining %d experience and %d credits\n", 
 			damage, (dmgmod * 100), '%', V_GetMonsterName(target->mtype), target->monsterinfo.level, exp_points, credits);
 	}
 }

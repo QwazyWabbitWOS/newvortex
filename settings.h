@@ -494,6 +494,10 @@
 #define ARMORY_QTY_FIRE_RESIST		25
 #define ARMORY_QTY_AUTO_TBALL		3
 
+//4.5 player combat preferences
+#define HOSTILE_PLAYERS				0x00000001			
+#define HOSTILE_MONSTERS			0x00000002
+
 //3.0 Special Flags
 #define SFLG_NONE					0x00000000
 #define SFLG_MATRIXJUMP				0x00000001

@@ -480,7 +480,7 @@ float G_SubDamage (edict_t *targ, edict_t *inflictor, edict_t *attacker,
 				   vec3_t point, float damage, int dflags, int mod)
 {
 	int		dtype;
-	float	temp;
+	float	temp = 1.0f;
 	que_t	*aura=NULL;
 	int talentLevel;
 

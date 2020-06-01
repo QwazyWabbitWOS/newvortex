@@ -2,16 +2,22 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{5068c4c2-1716-45f6-a264-63585cfeead0}</UniqueIdentifier>
+      <UniqueIdentifier>{ecd50550-019d-40e0-a9f0-69f802507d2e}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{13d6fb06-271d-42cf-90c3-8f2fcf79d1aa}</UniqueIdentifier>
+      <UniqueIdentifier>{abec7d6b-1a63-4d3c-aefc-d958046b4bb4}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{f55c6808-403e-4af7-93dc-dbd2e14b3619}</UniqueIdentifier>
+      <UniqueIdentifier>{c5ba6643-9d44-4e4a-a88d-8af60b13315e}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="AI Files">
+      <UniqueIdentifier>{ee4e0fb4-e86a-4e1f-bdc3-69f7974d9d39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{e616f46d-bf67-4c19-86df-29547fbff9c1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +204,9 @@
     <ClCompile Include="menu.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mersennetwister.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="minisentry.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -228,7 +237,7 @@
     <ClCompile Include="p_weapon.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Player.c">
+    <ClCompile Include="player.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="player_points.c">
@@ -267,13 +276,13 @@
     <ClCompile Include="shaman.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Spirit.c">
+    <ClCompile Include="spirit.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="supplystation.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Talents.c">
+    <ClCompile Include="talents.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="teamplay.c">
@@ -288,7 +297,7 @@
     <ClCompile Include="upgrades.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="V_file_IO.c">
+    <ClCompile Include="v_file_IO.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="v_items.c">
@@ -308,6 +317,48 @@
     </ClCompile>
     <ClCompile Include="weapons.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_class_dmbot.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_class_monster_default.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_dropnodes.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_items.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_links.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_main.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_movement.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_navigation.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_nodes.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_tools.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ai_weapons.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\AStar.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\bot_common.c">
+      <Filter>AI Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\bot_spawn.c">
+      <Filter>AI Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -449,13 +500,13 @@
     <ClInclude Include="shaman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Spirit.h">
+    <ClInclude Include="spirit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="sqlstuff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Talents.h">
+    <ClInclude Include="talents.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="v_maplist.h">
@@ -464,10 +515,28 @@
     <ClInclude Include="weapon_def.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ai\ai.h">
+      <Filter>AI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ai\ai_local.h">
+      <Filter>AI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ai\ai_nodes_local.h">
+      <Filter>AI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ai\ai_nodes_shared.h">
+      <Filter>AI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ai\ai_weapons.h">
+      <Filter>AI Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ai\AStar.h">
+      <Filter>AI Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="game.def">
-      <Filter>Source Files</Filter>
+      <Filter>Resources</Filter>
     </None>
   </ItemGroup>
 </Project>
