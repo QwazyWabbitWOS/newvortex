@@ -1286,7 +1286,7 @@ void GetChaseTarget(edict_t *ent);
 
 //============================================================================
 
-#include "ai\ai.h"//JABot
+#include "ai/ai.h"//JABot
 
 // client_t->anim_priority
 #define	ANIM_BASIC		0		// stand / run
