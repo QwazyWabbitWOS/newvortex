@@ -1,7 +1,7 @@
 CC=gcc
 COCKBAGS_MAKEFILE=makefile
 SHARED_FLAGS:=
-RELEASE_CFLAGS=-Isource/ -I./ -I../ $(SHARED_FLAGS) -O2 -fno-strict-aliasing -ffast-math -fexpensive-optimizations
+RELEASE_CFLAGS=-Isource/ -I./ -I../ $(SHARED_FLAGS) -O3
 DEBUG_CFLAGS=-g -Isource/ -I./ -I../ $(SHARED_FLAGS) -DC_ONLY
 LDFLAGS=-lm -shared
 #DED_LDFLAGS=-ldl -lm -lz
@@ -30,7 +30,7 @@ debug:
 
 release:
 	@-mkdir -p $(BUILD_RELEASE_DIR)
-	$(MAKE) -f $(COCKBAGS_MAKEFILE) targets BUILDDIR=$(BUILD_RELEASE_DIR) SOURCEDIR=. CFLAGS="$(RELEASE_CFLAGS) -Os -g -fPIC -std=c99 -shared"
+	$(MAKE) -f $(COCKBAGS_MAKEFILE) targets BUILDDIR=$(BUILD_RELEASE_DIR) SOURCEDIR=. CFLAGS="$(RELEASE_CFLAGS) -g -fPIC -std=c99 -shared"
 
 targets: $(TARGETS)
 
